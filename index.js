@@ -16,5 +16,5 @@ module.exports = {};
 fs.readdirSync(path.join(__dirname, 'jquery')).forEach(function(file) {
     var framework = createFramework(file);
     framework.$inject = ['config.files'];
-    module.exports['framework:' + path.basename(file, '.js')] = ['factory', framework];
+    module.exports['framework:' + path.basename(file, '.min.js')] = ['factory', framework];
 });
